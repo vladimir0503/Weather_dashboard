@@ -15,12 +15,12 @@ const SearchField = () => {
     const dispatch = useDispatch();
 
     const handleChange = e => {
-        let nextVal = e.currentTarget.value;
-        const yratext = /[А-я',':'.!?; ]/;
-        if (yratext.test(nextVal)) {
+        let value = e.currentTarget.value;
+        const template = /[А-я',':'.!?; ]/;
+        if (template.test(value)) {
             return;
         };
-        setCityName(nextVal);
+        setCityName(value);
     }
 
     const handleSubmit = () => {

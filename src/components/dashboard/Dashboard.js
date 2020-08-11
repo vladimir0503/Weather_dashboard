@@ -10,7 +10,7 @@ const Dashboard = () => {
         <div className='container'>
             {!weatherData.length ? 
             <p className='info'>Dashboard is empty</p> 
-            : weatherData.map((card, index) => <WetaherCard key={index} data={card} index={index}/>)}
+            : weatherData.map((card, index) => <WetaherCard key={index} data={card}/>)}
         </div>
     )
 
