@@ -6,12 +6,12 @@ import { useDispatch } from 'react-redux';
 const id = '225075b520e334f9e85c982e7e61933b';
 
 const addWeatherCard = (data) => {
-    return { type: 'ADD_WEATHER', payload: data}
+    return { type: 'ADD_WEATHER', payload: data }
 };
 
 const SearchField = () => {
 
-    const [ cityName, setCityName ] = React.useState('');
+    const [cityName, setCityName] = React.useState('');
     const dispatch = useDispatch();
 
     const handleChange = e => {
@@ -24,7 +24,7 @@ const SearchField = () => {
     }
 
     const handleSubmit = () => {
-        axios.post(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${id}`)
+        axios.post(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${id}`)
             .then(res => {
                 let weatherData = {
                     id: res.data.id,
